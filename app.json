@@ -56,16 +56,6 @@
         "description": "حط ايدي جروب السجل يبدأ ب -100 وارفع البوت والحساب المساعد مشرف الاول",
         "value": "-100",
         "required": true
-      },
-      "UPSTREAM_REPO": {
-        "description": "لا تغيرهــا",
-        "value": "https://github.com/Heroku_Back/Red-Wine_Music",
-        "required": true
-      },
-      "UPSTREAM_BRANCH": {
-        "description": "لا تغيرهــا",
-        "value": "master",
-        "required": true
       }
     },
     "buildpacks": [
