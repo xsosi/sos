@@ -5,7 +5,6 @@ beautifulsoup4
 dnspython
 ffmpeg-python
 gitpython
-git
 hachoir
 heroku3
 motor
@@ -20,7 +19,6 @@ requests
 speedtest-cli
 spotipy
 tgcrypto
-wget
 unidecode
 yt-dlp==2023.09.24
 youtube-search
