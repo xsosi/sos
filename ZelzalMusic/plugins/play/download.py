@@ -11,7 +11,7 @@ import aiofiles
 import yt_dlp
 from yt_dlp import YoutubeDL
 from pyrogram import Client, filters
-from pyrogram.errors import FloodWait, MessageNotModifiedError
+from pyrogram.errors import FloodWait
 from pyrogram.types import Message, InputTextMessageContent
 from youtube_search import YoutubeSearch
 
