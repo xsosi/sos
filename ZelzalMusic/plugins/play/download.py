@@ -24,7 +24,7 @@ def remove_if_exists(path):
 
 
 @app.on_message(command(["/song", "بحث", "/music"]))
-async def song_downloader(client, message: Message, _):
+async def song_downloader(client, message: Message):
     query = " ".join(message.command[1:])
     m = await message.reply_text("**⇜ جـارِ البحث عـن المقطـع الصـوتـي . . .**")
     ydl_ops = {
