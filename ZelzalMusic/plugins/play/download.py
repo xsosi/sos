@@ -78,4 +78,6 @@ async def song_downloader(client, message: Message, _):
 
     try:
         remove_if_exists(audio_file)
-        remove_if_exists
+        remove_if_exists(thumb_name)
+    except Exception as e:
+        print(e)
