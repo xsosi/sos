@@ -29,7 +29,7 @@ async def tiktok_video(client, message):
         ]
     ])
     await message.reply_video(
-        video=video
+        video=video,
         caption='- {} .'.format(title),
         reply_markup=InlineKeyboardMarkup(
             [
@@ -40,4 +40,4 @@ async def tiktok_video(client, message):
             ]
         ),
     )
-    await m.delete()
+ 
