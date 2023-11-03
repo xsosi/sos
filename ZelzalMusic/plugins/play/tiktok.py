@@ -14,7 +14,7 @@ from ZelzalMusic import app
 from ZelzalMusic.plugins.play.filters import command
 
 @app.on_message(command(["/tok", "تيك", "/tik"]))
-def tiktok_video(client, message):
+async def tiktok_video(client, message):
     query = " ".join(message.command[1:])
     m = await message.reply_text("<b>⇜ جـارِ التحميـل مـن تيـك تـوك . . .</b>")
     idd = message.from_user.id
