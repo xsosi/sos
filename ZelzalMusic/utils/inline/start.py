@@ -17,7 +17,7 @@ def start_panel(_):
             )
         ],
         [
-            InlineKeyboardButton(text=_["S_B_6"], url="https://t.me/ZThon_Music"),
+            InlineKeyboardButton(text=_["S_B_6"], url="https://t.me/mmmsc"),
         ],
     ]
     return buttons
