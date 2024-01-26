@@ -1,6 +1,6 @@
 #▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ ʑᴇʟᴢᴀʟ_ᴍᴜsɪᴄ ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 #▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯  T.me/ZThon   ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ T.me/Zelzal_Music ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ T.me/ZThon_Music ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
 import re
 from os import getenv
@@ -18,7 +18,7 @@ API_HASH = getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://Anubarlo:Anubarlo@cluster0.ioiefbq.mongodb.net/?retryWrites=true&w=majority")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://proceed58:proceed58@cluster0.p5s9ym5.mongodb.net/?retryWrites=true&w=majority")
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 2000))
 
@@ -36,14 +36,13 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/ali-now/dec",
+    "https://github.com/ali-now447/newmusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-CH_US = getenv("CH_US", "mmmsc")
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/mmmsc")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/mmmsc")
 
@@ -66,7 +65,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 # Checkout https://www.gbmb.org/mb-to-bytes for converting mb to bytes
 
 
-# Get your pyrogram v2 session from @T66bot on Telegram
+# Get your pyrogram v2 session from @StringFatherBot on Telegram
 STRING1 = getenv("STRING_SESSION", None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
@@ -83,21 +82,21 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
+    "START_IMG_URL", "https://telegra.ph/file/feeef194eac477862bff6.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
+    "PING_IMG_URL", "https://telegra.ph/file/feeef194eac477862bff6.jpg"
 )
-PLAYLIST_IMG_URL = "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
-STATS_IMG_URL = "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
-TELEGRAM_AUDIO_URL = "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
-TELEGRAM_VIDEO_URL = "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
-STREAM_IMG_URL = "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
-SOUNCLOUD_IMG_URL = "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
-YOUTUBE_IMG_URL = "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/1df1d4ee78c1dce31f4fe.jpg"
+PLAYLIST_IMG_URL = "https://telegra.ph/file/feeef194eac477862bff6.jpg"
+STATS_IMG_URL = "https://telegra.ph/file/feeef194eac477862bff6.jpg"
+TELEGRAM_AUDIO_URL = "https://telegra.ph/file/feeef194eac477862bff6.jpg"
+TELEGRAM_VIDEO_URL = "https://telegra.ph/file/feeef194eac477862bff6.jpg"
+STREAM_IMG_URL = "https://telegra.ph/file/feeef194eac477862bff6.jpg"
+SOUNCLOUD_IMG_URL = "https://telegra.ph/file/feeef194eac477862bff6.jpg"
+YOUTUBE_IMG_URL = "https://telegra.ph/file/feeef194eac477862bff6.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/feeef194eac477862bff6.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/feeef194eac477862bff6.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/feeef194eac477862bff6.jpg"
 
 
 def time_to_seconds(time):
