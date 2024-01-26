@@ -41,7 +41,7 @@ async def log_(client, message, _):
         await message.reply_text(_["server_1"])
 
 
-@app.on_message(command(["تحدديث", "حدث"]) & SUDOERS)
+@app.on_message(command(["تحديث", "حدث"]) & SUDOERS)
 @language
 async def update_(client, message, _):
     if await is_heroku():
