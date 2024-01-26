@@ -16,7 +16,7 @@ from config import OWNER_ID
 @app.on_callback_query(filters.regex("zzzback"))
 async def zzzback(_, query: CallbackQuery):
    await query.edit_message_text(
-       f"""<b>» مرحبـاً بك عـزيـزي 𝄞</b>\n<b>» استخـدم الازرار بالاسفـل\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
+       f"""<b>» مرحبـاً بك عـزيـزي 𝄞</b>\n<b>» استخـدم الازرار بالاسفـل\n» لـ تصفـح اوامـر الميـوزك 🍓</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
