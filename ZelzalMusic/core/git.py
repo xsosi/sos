@@ -46,9 +46,10 @@ def git():
     else:
         UPSTREAM_REPO = config.UPSTREAM_REPO
     try:
-        LOGGER("ميــوزك زدثــون").info(f"Git Client Found [VPS DEPLOYER]")
+        repo = Repo()
+        LOGGER("ميــوزك الـجـزار").info(f"Git Client Found [VPS DEPLOYER]")
     except GitCommandError:
-        LOGGER("ميــوزك زدثــون").info(f"Invalid Git Command")
+        LOGGER("ميــوزك الـجـزار").info(f"Invalid Git Command")
     except InvalidGitRepositoryError:
         repo = Repo.init()
         if "origin" in repo.remotes:
@@ -75,4 +76,4 @@ def git():
         except GitCommandError:
             repo.git.reset("--hard", "FETCH_HEAD")
         install_req("pip3 install --no-cache-dir -r requirements.txt")
-        LOGGER("ميــوزك زدثــون").info(f"جارِ الكشف عن تحديثات جديدة . . .")
+        LOGGER("ميــوزك الـجـزار").info(f"جارِ الكشف عن تحديثات جديدة . . .")
