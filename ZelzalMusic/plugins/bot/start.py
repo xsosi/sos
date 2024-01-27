@@ -1,83 +1,3 @@
-if(isset($update->message)){
-$message = $update->message;
-$message_id = $update->message->message_id;
-$chat_id = $message->chat->id;
-$text = $message->text;
-$user = $message->from->username;
-$name = $message->from->first_name;
-$from_id = $message->from->id;
-$tc = $message->chat->type;
-}
-if(isset($update->callback_query)){
-$data = $update->callback_query->data;
-$chat_id = $update->callback_query->message->chat->id;
-$message_id = $update->callback_query->message->message_id;
-$name = $update->callback_query->message->chat->first_name;
-$user = $update->callback_query->message->chat->username;
-$from_id = $chat_id;
-$tc = $update->callback_query->message->chat->type;
-}
-$mei = bot('getme',['bot'])->result->id;
-$ch = '-1001299814737';
-if($tc == 'private'){
-$ok = bot('getChatMember',['chat_id'=>$ch,'user_id'=>$mei]);
-if($ch != null and $ok->ok == "true" and $ok->result->status != "left"){
-if(preg_match("/(-100)(.)/", $ch) and !preg_match("/(.)(-100)(.)/", $ch)){
- $link = bot("getchat",['chat_id'=>$ch])->result->invite_link;
- if($link != null){
-  $link = $link;
-$link2 = $link;
-  }else{
-   $link = bot("exportChatInviteLink",['chat_id'=>$ch])->result;
-$link2 = $link;
-   }
- }elseif(preg_match("/(@)(.)/", $ch) and !preg_match("/(.)(@)(.)/", $ch)){
-  $link = "$ch";
-$ch3 = str_replace("@","",$ch);
-$link2 = "https://t.me/$ch3";
-  }
-  $status = bot('getChatMember',['chat_id'=>$ch,'user_id'=>$from_id])->result->status;
-if($status != "member" and $status != "creator" and $status != "administrator"){
-if($message){
- bot('sendmessage',[
-      'chat_id'=>$chat_id,
-      "text"=>"
-▫️ يجب عليك الإشتراك في قناة البوت أولاً ⚜️؛
-▪️ $link
-◼️ إشترك في القناة ثم أرسل /start ، 📛
-      ",'reply_to_message_id'=>$message_id,
-      'reply_markup'=>json_encode([
-    'inline_keyboard'=>[
-[['text'=>"• اشتراك ♻ ✅",'url'=>$link2]],
-]])
-]);
-exit();
- }
- if($data){
-  bot('EditMessageText',[
-        'chat_id'=>$chat_id,
-        'message_id'=>$message_id,
-        'text'=>"
-▫️ يجب عليك الإشتراك في قناة البوت أولاً ⚜️؛
-▪️ $link
-◼️ إشترك في القناة ثم أرسل /start ، 📛
-        ",'reply_markup'=>json_encode([
-    'inline_keyboard'=>[
-[['text'=>"• اشتراك ♻ ✅",'url'=>$link2]],
-]])
-]);
-exit();
-  }
-}
-}
-}
-
-
-// افضل كود اشتراك اجباري يشتغل للقنوات العامه والخاصه 
-// الكود من لوحه يحي السوري استخرجته وضفت المتغيرات تقدر تستخدمف في اي بوت 
-// حط معرف قناتك او ايدي قناتك بمتغير $ch 
-// الكود دا افضل كود اشتراك وبستخدمه شخصياا
-
 #▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ ʑᴇʟᴢᴀʟ_ᴍᴜsɪᴄ ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 #▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯  T.me/ZThon   ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 #▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ T.me/ZThon_Music ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
