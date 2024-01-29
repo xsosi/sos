@@ -44,8 +44,8 @@ async def braodcast_message(client, message, _):
             query = query.replace("-pinloud", "")
         if "-assistant" in query:
             query = query.replace("-assistant", "")
-        if "-user" in query:
-            query = query.replace("-user", "")
+        if "للمستخدمين" in query:
+            query = query.replace("للمستخدمين", "")
         if query == "":
             return await message.reply_text(_["broad_8"])
 
