@@ -8,11 +8,11 @@ from ZelzalMusic import app
 # vc on
 @app.on_message(filters.video_chat_started)
 async def zed(_, msg):
-       await msg.reply("<b>- تـم فتـح المحـادثـه الصـوتيـة ✓</b>")
+       await msg.reply("<b>- تـم فتـح المحـادثـه الصـوتيـة 🍓</b>")
 # vc off
 @app.on_message(filters.video_chat_ended)
 async def zed2(_, msg):
-       await msg.reply("<b>- تـم إغـلاق المحـادثـه الصـوتيـة ✗</b>")
+       await msg.reply("<b>- تـم إغـلاق المحـادثـه الصـوتيـة 🦋</b>")
 
 # invite members on vc
 @app.on_message(filters.video_chat_members_invited)
