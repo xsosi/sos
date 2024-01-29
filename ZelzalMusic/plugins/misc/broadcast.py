@@ -25,7 +25,7 @@ from config import adminlist
 IS_BROADCASTING = False
 
 
-@app.on_message(command(["اذاعه", "اذاعه"]) & SUDOERS)
+@app.on_message(command(["اذاعه", "/broadcast"]) & SUDOERS)
 @language
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
@@ -44,8 +44,8 @@ async def braodcast_message(client, message, _):
             query = query.replace("-pinloud", "")
         if "-assistant" in query:
             query = query.replace("-assistant", "")
-        if "للمستخدمين" in query:
-            query = query.replace("للمستخدمين", "")
+        if "-user" in query:
+            query = query.replace("-user", "")
         if query == "":
             return await message.reply_text(_["broad_8"])
 
