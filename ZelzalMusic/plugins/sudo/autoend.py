@@ -11,7 +11,7 @@ from ZelzalMusic.misc import SUDOERS
 from ZelzalMusic.utils.database import autoend_off, autoend_on
 
 
-@app.on_message(command(["المغادره التلقائية تفعيل", "المغادره التلقائيه تعطيل"]) & SUDOERS)
+@app.on_message(command(["المغادره التلقائيه", "المغادره التلقائيه"]) & SUDOERS)
 async def auto_end_stream(_, message: Message):
     usage = "<b>• مثــال :</b>\n\nالمغادره التلقائيه [تفعيل | تعطيل]"
     if len(message.command) != 2:
