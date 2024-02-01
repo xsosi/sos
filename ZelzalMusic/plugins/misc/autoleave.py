@@ -15,7 +15,7 @@ from ZelzalMusic.utils.database import get_client, is_active_chat, is_autoend
 
 async def auto_leave():
     if config.AUTO_LEAVING_ASSISTANT:
-        while not await asyncio.sleep(60000):
+        while not await asyncio.sleep(5):
             from ZelzalMusic.core.userbot import assistants
 
             for num in assistants:
