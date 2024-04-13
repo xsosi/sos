@@ -1,3 +1,5 @@
+ZelzalMusic=AnonXMusic
+Anony=Zelzaly
 import random
 import string
 from ast import ExceptHandler
@@ -8,29 +10,29 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BOT_TOKEN
 from strings.filters import command
-from ZelzalMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from ZelzalMusic.core.call import Zelzaly
-from ZelzalMusic.utils import seconds_to_min, time_to_seconds
-from ZelzalMusic.utils.channelplay import get_channeplayCB
-from ZelzalMusic.utils.decorators.language import languageCB
-from ZelzalMusic.utils.decorators.play import PlayWrapper
-from ZelzalMusic.utils.formatters import formats
-from ZelzalMusic.utils.inline import (
+from AnonXMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from AnonXMusic.core.call import Anony
+from AnonXMusic.utils import seconds_to_min, time_to_seconds
+from AnonXMusic.utils.channelplay import get_channeplayCB
+from AnonXMusic.utils.decorators.language import languageCB
+from AnonXMusic.utils.decorators.play import PlayWrapper
+from AnonXMusic.utils.formatters import formats
+from AnonXMusic.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from ZelzalMusic.utils.logger import play_logs
-from ZelzalMusic.utils.stream.stream import stream
+from AnonXMusic.utils.logger import play_logs
+from AnonXMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 force_btn = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(   
-              text=f"اضغط للأشتراك .", url=f"t.me/mmmsc",)                        
+              text=f"اضغط للأشتراك .", url=f"t.me/zzsvv",)                        
         ],        
     ]
 )
@@ -38,15 +40,15 @@ async def check_is_joined(message):
     try:
         userid = message.from_user.id
         user_name = message.from_user.first_name
-        status = await app.get_chat_member("mmmsc", userid)
+        status = await app.get_chat_member("zzsvv", userid)
         return True
     except Exception:
-        await message.reply_text(f'❤️‍🩹┇عزيزي: {message.from_user.mention}\n🫀┇أشتࢪك في قناة البوت أولاً.\n🚧┇قناة البوت: @mmmsc 🫂',reply_markup=force_btn,disable_web_page_preview=False)
+        await message.reply_text(f'❤️‍🩹┇عزيزي: {message.from_user.mention}\n🫀┇أشتࢪك في قناة البوت أولاً.\n🚧┇قناة البوت: @zzsvv 🫂',reply_markup=force_btn,disable_web_page_preview=False)
         return False
 
 
 @app.on_message(command(["شغل","تشغيل"])
-    & filters.channel
+    & filters.group
     & ~BANNED_USERS
 )
 @app.on_message(filters.command(["play","vplay","cplay","cvplay",
@@ -54,7 +56,7 @@ async def check_is_joined(message):
             "vplayforce",
             "cplayforce",
             "cvplayforce",])
-                & filters.channel
+    & filters.group
     & ~BANNED_USERS
 )
 @PlayWrapper
@@ -306,7 +308,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await Zelzaly.stream_call(url)
+                await Anony.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(_["black_9"])
                 return await app.send_message(
@@ -519,8 +521,8 @@ async def play_music(client, CallbackQuery, _):
     return await mystic.delete()
 
 
-@app.on_callback_query(filters.regex("ZelzalymousAdmin") & ~BANNED_USERS)
-async def Anonymous_check(client, CallbackQuery):
+@app.on_callback_query(filters.regex("AnonymousAdmin") & ~BANNED_USERS)
+async def anonymous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
             "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
@@ -530,7 +532,7 @@ async def Anonymous_check(client, CallbackQuery):
         pass
 
 
-@app.on_callback_query(filters.regex("ZelzalyPlaylists") & ~BANNED_USERS)
+@app.on_callback_query(filters.regex("AnonyPlaylists") & ~BANNED_USERS)
 @languageCB
 async def play_playlists_command(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
