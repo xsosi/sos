@@ -46,6 +46,7 @@ async def check_is_joined(message):
 
 
 @app.on_message(command(["شغل","تشغيل"])
+    & filters.channel
     & ~BANNED_USERS
 )
 @app.on_message(filters.command(["play","vplay","cplay","cvplay",
@@ -53,6 +54,7 @@ async def check_is_joined(message):
             "vplayforce",
             "cplayforce",
             "cvplayforce",])
+                & filters.channel
     & ~BANNED_USERS
 )
 @PlayWrapper
