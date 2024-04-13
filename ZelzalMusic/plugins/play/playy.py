@@ -6,22 +6,22 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from strings.filters import command
-from AnonXMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from AnonXMusic.core.call import Zelzaly
-from AnonXMusic.utils import seconds_to_min, time_to_seconds
-from AnonXMusic.utils.channelplay import get_channeplayCB
-from AnonXMusic.utils.decorators.language import languageCB
-from AnonXMusic.utils.decorators.play import PlayWrapper
-from AnonXMusic.utils.formatters import formats
-from AnonXMusic.utils.inline import (
+from ZelzalMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
+from ZelzalMusic.core.call import Zelzaly
+from ZelzalMusic.utils import seconds_to_min, time_to_seconds
+from ZelzalMusic.utils.channelplay import get_channeplayCB
+from ZelzalMusic.utils.decorators.language import languageCB
+from ZelzalMusic.utils.decorators.play import PlayWrapper
+from ZelzalMusic.utils.formatters import formats
+from ZelzalMusic.utils.inline import (
     botplaylist_markup,
     livestream_markup,
     playlist_markup,
     slider_markup,
     track_markup,
 )
-from AnonXMusic.utils.logger import play_logs
-from AnonXMusic.utils.stream.stream import stream
+from ZelzalMusic.utils.logger import play_logs
+from ZelzalMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 
