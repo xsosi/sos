@@ -1,4 +1,4 @@
-ZelzalMusic=AnonXMusic
+AnonXMusic=ZelzalMusic
 Anony=Zelzaly
 import random
 import string
