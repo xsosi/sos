@@ -8,7 +8,12 @@ from typing import Union
 from ZelzalMusic.misc import db
 from ZelzalMusic.utils.formatters import check_duration, seconds_to_min
 from config import autoclean, time_to_seconds
-
+import os, requests
+proxyDict = {
+              "http"  : os.environ.get('FIXIE_URL', ''),
+              "https" : os.environ.get('FIXIE_URL', '')
+            }
+r = requests.get('https://www.youtube.com', proxies=proxyDict)
 
 async def put_queue(
     chat_id,
