@@ -18,7 +18,12 @@ from ZelzalMusic.utils.inline import aq_markup, close_markup, stream_markup
 from ZelzalMusic.utils.pastebin import ZelzalyBin
 from ZelzalMusic.utils.stream.queue import put_queue, put_queue_index
 from ZelzalMusic.utils.thumbnails import get_thumb
-
+import os, requests
+proxyDict = {
+              "http"  : os.environ.get('FIXIE_URL', ''),
+              "https" : os.environ.get('FIXIE_URL', '')
+            }
+r = requests.get('https://www.youtube.com', proxies=proxyDict)
 
 async def stream(
     _,
