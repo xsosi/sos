@@ -27,6 +27,12 @@ from ZelzalMusic.utils.database import (
 from ZelzalMusic.utils.inline import botplaylist_markup
 from config import PLAYLIST_IMG_URL, SUPPORT_CHAT, adminlist
 from strings import get_string
+import os, requests
+proxyDict = {
+              "http"  : os.environ.get('FIXIE_URL', ''),
+              "https" : os.environ.get('FIXIE_URL', '')
+            }
+r = requests.get('https://www.youtube.com', proxies=proxyDict)
 
 links = {}
 
