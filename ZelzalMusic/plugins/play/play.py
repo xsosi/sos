@@ -30,8 +30,6 @@ proxyDict = {
               "http"  : os.environ.get('FIXIE_URL', ''),
               "https" : os.environ.get('FIXIE_URL', '')
             }
-r = requests.get('https://www.youtube.com', proxies=proxyDict)
-
 force_btn = InlineKeyboardMarkup(
     [
         [
@@ -75,6 +73,7 @@ async def play_commnd(
     url,
     fplay,
 ):
+    r = requests.get('https://www.youtube.com', proxies=proxyDict)
     if not await check_is_joined(message):
         return
     mystic = await message.reply_text(
