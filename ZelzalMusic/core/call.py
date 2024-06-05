@@ -42,11 +42,7 @@ from ZelzalMusic.utils.stream.autoclear import auto_clean
 from ZelzalMusic.utils.thumbnails import get_thumb
 from strings import get_string
 import os, requests
-proxyDict = {
-              "http"  : os.environ.get('FIXIE_URL', ''),
-              "https" : os.environ.get('FIXIE_URL', '')
-            }
-r = requests.get('https://www.youtube.com', proxies=proxyDict)
+
 
 autoend = {}
 counter = {}
