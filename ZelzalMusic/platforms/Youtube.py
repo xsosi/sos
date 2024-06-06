@@ -1,7 +1,3 @@
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ ʑᴇʟᴢᴀʟ_ᴍᴜsɪᴄ ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯  T.me/ZThon   ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-#▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒✯ T.me/Zelzal_Music ✯▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-
 import asyncio
 import os
 import re
@@ -38,6 +34,7 @@ async def shell_cmd(cmd):
 
 class YouTubeAPI:
     def __init__(self):
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         self.base = "https://www.youtube.com/watch?v="
         self.regex = r"(?:youtube\.com|youtu\.be)"
         self.status = "https://www.youtube.com/oembed?url="
@@ -45,6 +42,7 @@ class YouTubeAPI:
         self.reg = re.compile(r"\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])")
 
     async def exists(self, link: str, videoid: Union[bool, str] = None):
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         if videoid:
             link = self.base + link
         if re.search(self.regex, link):
@@ -53,6 +51,7 @@ class YouTubeAPI:
             return False
 
     async def url(self, message_1: Message) -> Union[str, None]:
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         messages = [message_1]
         if message_1.reply_to_message:
             messages.append(message_1.reply_to_message)
@@ -77,6 +76,7 @@ class YouTubeAPI:
         return text[offset : offset + length]
 
     async def details(self, link: str, videoid: Union[bool, str] = None):
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         if videoid:
             link = self.base + link
         if "&" in link:
@@ -94,6 +94,7 @@ class YouTubeAPI:
         return title, duration_min, duration_sec, thumbnail, vidid
 
     async def title(self, link: str, videoid: Union[bool, str] = None):
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         if videoid:
             link = self.base + link
         if "&" in link:
@@ -104,6 +105,7 @@ class YouTubeAPI:
         return title
 
     async def duration(self, link: str, videoid: Union[bool, str] = None):
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         if videoid:
             link = self.base + link
         if "&" in link:
@@ -114,6 +116,7 @@ class YouTubeAPI:
         return duration
 
     async def thumbnail(self, link: str, videoid: Union[bool, str] = None):
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         if videoid:
             link = self.base + link
         if "&" in link:
@@ -124,6 +127,7 @@ class YouTubeAPI:
         return thumbnail
 
     async def video(self, link: str, videoid: Union[bool, str] = None):
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         if videoid:
             link = self.base + link
         if "&" in link:
@@ -144,6 +148,7 @@ class YouTubeAPI:
             return 0, stderr.decode()
 
     async def playlist(self, link, limit, user_id, videoid: Union[bool, str] = None):
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         if videoid:
             link = self.listbase + link
         if "&" in link:
@@ -161,6 +166,7 @@ class YouTubeAPI:
         return result
 
     async def track(self, link: str, videoid: Union[bool, str] = None):
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         if videoid:
             link = self.base + link
         if "&" in link:
@@ -182,6 +188,7 @@ class YouTubeAPI:
         return track_details, vidid
 
     async def formats(self, link: str, videoid: Union[bool, str] = None):
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         if videoid:
             link = self.base + link
         if "&" in link:
@@ -223,6 +230,7 @@ class YouTubeAPI:
         query_type: int,
         videoid: Union[bool, str] = None,
     ):
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         if videoid:
             link = self.base + link
         if "&" in link:
@@ -246,6 +254,7 @@ class YouTubeAPI:
         format_id: Union[bool, str] = None,
         title: Union[bool, str] = None,
     ) -> str:
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
         if videoid:
             link = self.base + link
         loop = asyncio.get_running_loop()
