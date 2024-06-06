@@ -31,7 +31,7 @@ proxyDict = {
               "https" : os.environ.get('FIXIE_URL', '')
             }
             
-            r = requests.get('https://www.youtube.com', proxies=proxyDict)
+        r = requests.get('https://www.youtube.com', proxies=proxyDict)
 force_btn = InlineKeyboardMarkup(
     [
         [
