@@ -2,6 +2,7 @@ services:
   - type: web
     name: Music
     env: python
-    buildCommand: 'pip install -r requirements.txt'
+    buildCommand: |
+      docker build -t music-app .
     startCommand: 'bash start'
     plan: free
