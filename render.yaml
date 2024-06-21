@@ -1,6 +1,6 @@
 services:
   - type: worker
-    name: my-telegram-bot
+    name: Music
     env: python
     buildCommand: 'pip install -r requirements.txt'
     startCommand: 'bash start'
