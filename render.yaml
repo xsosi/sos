@@ -6,8 +6,6 @@ services:
       apt-get update && \
       apt-get install -y --no-install-recommends ffmpeg && \
       apt-get clean && \
-      rm -rf /var/lib/apt/lists/* && \
-      mkdir -p /var/lib/apt/lists/partial && \
       pip3 install --no-cache-dir -U -r requirements.txt
     startCommand: 'bash start'
     plan: free
