@@ -3,6 +3,10 @@ services:
     name: Music
     env: python
     buildCommand: |
-      docker build -t music-app .
+      apt-get update && \
+      apt-get install -y --no-install-recommends ffmpeg && \
+      apt-get clean && \
+      rm -rf /var/lib/apt/lists/* && \
+      pip3 install --no-cache-dir -U -r requirements.txt
     startCommand: 'bash start'
     plan: free
