@@ -3,9 +3,6 @@ services:
     name: Music
     env: python
     buildCommand: |
-      apt-get update && \
-      apt-get install -y --no-install-recommends ffmpeg && \
-      apt-get clean && \
       pip3 install --no-cache-dir -U -r requirements.txt
     startCommand: 'bash start'
     plan: free
