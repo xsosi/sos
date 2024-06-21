@@ -9,4 +9,4 @@ COPY . /app/
 WORKDIR /app/
 RUN pip3 install --no-cache-dir -U -r requirements.txt
 
-CMD ["sh", "-c", "gunicorn -b 0.0.0.0:$5000 zoz:app & bash start"]
+
