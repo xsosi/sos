@@ -1,2 +1,2 @@
 export FLASK_APP=zoz:app
-exec gunicorn -b 0.0.0.0:8000 -w 4 application:app & python3 -m ZelzalMusic
+exec gunicorn -b 0.0.0.0:5000 -w 4 application:app & python3 -m ZelzalMusic
