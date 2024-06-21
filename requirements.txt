@@ -20,6 +20,7 @@ speedtest-cli
 spotipy
 tgcrypto
 unidecode
+gunicorn==20.1.0
 Flask
 flask_restful
 git+https://github.com/yt-dlp/yt-dlp@master
