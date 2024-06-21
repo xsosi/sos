@@ -1,2 +1,1 @@
-python3 -m zoz
-python3 -m ZelzalMusic
+python3 -m zoz & python3 -m ZelzalMusic
