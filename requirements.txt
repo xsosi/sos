@@ -1,6 +1,6 @@
 aiofiles
 aiohttp
-asyncio==3.4.3
+asyncio
 beautifulsoup4
 dnspython
 ffmpeg-python
@@ -20,6 +20,6 @@ speedtest-cli
 spotipy
 tgcrypto
 unidecode
-git+https://github.com/yt-dlp/yt-dlp@master
-git+https://github.com/alexmercerind/youtube-search-python@main
-git+https://github.com/joetats/youtube_search@master
+yt-dlp
+youtube-search
+youtube-search-python
