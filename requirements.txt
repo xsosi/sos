@@ -20,9 +20,7 @@ speedtest-cli
 spotipy
 tgcrypto
 unidecode
-gunicorn==20.1.0
-Flask
-flask_restful
+urllib3
 git+https://github.com/yt-dlp/yt-dlp@master
 git+https://github.com/alexmercerind/youtube-search-python@main
 git+https://github.com/joetats/youtube_search@master
