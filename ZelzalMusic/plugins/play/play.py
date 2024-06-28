@@ -30,7 +30,7 @@ force_btn = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(   
-              text=f"Not Res .", url=f"t.me/mmmsc",)                        
+              text=f"Not sos .", url=f"t.me/mmmsc",)                        
         ],        
     ]
 )
